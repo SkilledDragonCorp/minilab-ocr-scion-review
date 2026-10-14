@@ -1,3 +1,4 @@
 [test]
 # Keep lab tests under tests/; do not pick up upstream JS fixtures.
 root = "./tests"
+
