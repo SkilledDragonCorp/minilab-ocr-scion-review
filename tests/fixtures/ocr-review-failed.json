@@ -1,0 +1,109 @@
+{
+  "status": "failed",
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash"
+  },
+  "message": "Review failed: 0 finding(s); 1 of 1 selected item(s) failed.",
+  "summary": {
+    "files_reviewed": 1,
+    "comments": 0,
+    "total_tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "elapsed": "2s"
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {},
+    "failure": 0,
+    "failure_by_tool": {},
+    "failure_details": []
+  },
+  "comments": null,
+  "groups": [
+    {
+      "label": "app.ts",
+      "files": [
+        "app.ts"
+      ]
+    }
+  ],
+  "session_id": "1b2783a2-9851-4f8e-b1a8-011c5ca375b0",
+  "manifest": {
+    "schema_version": "ocr.run-manifest/v1",
+    "run_id": "1b2783a2-9851-4f8e-b1a8-011c5ca375b0",
+    "operation": "review",
+    "terminal_state": "failed",
+    "repository": {},
+    "input": {
+      "mode": "range",
+      "requested_from": "d035682daf020017c7c95daa168a61671e16da7b",
+      "requested_head": "c25b42c268dc7a4859927e5056674a481ce0b1a6",
+      "resolved_base": "d035682daf020017c7c95daa168a61671e16da7b",
+      "resolved_head": "c25b42c268dc7a4859927e5056674a481ce0b1a6",
+      "exact_range": "d035682daf020017c7c95daa168a61671e16da7b..c25b42c268dc7a4859927e5056674a481ce0b1a6",
+      "source_artifact_sha256": "2b30c83400e280416e6821ad9f57612a72cd8509f60717cf30c84098bba6d982"
+    },
+    "execution": {
+      "ocr_version": "v1.13.0",
+      "provider": "gemini",
+      "model": "gemini-3.5-flash",
+      "configured_concurrency": 8,
+      "rule_config_sha256": "d5e28d02ed5cdf85b533907db24b47f1be02847db764a4ded208dbaf54380ae1",
+      "runtime_config_sha256": "6a026157c52ac4d7d8eca8b0af8ce341aa029c0b33ddb65d160a1850ceba0adb"
+    },
+    "coverage": {
+      "selected": [
+        {
+          "item_id": "09d5c63be903cd5019020ce8c5c6dd9e2c90956683c0f8c781849356d80c8727",
+          "path": "app.ts",
+          "fingerprint": "7c1406bad738dcedf7a21b01bec790f8f2e6276c8b96213e5b7b20e16b50791b"
+        }
+      ],
+      "completed": [],
+      "reused": [],
+      "failed": [
+        {
+          "item_id": "09d5c63be903cd5019020ce8c5c6dd9e2c90956683c0f8c781849356d80c8727",
+          "path": "app.ts",
+          "fingerprint": "7c1406bad738dcedf7a21b01bec790f8f2e6276c8b96213e5b7b20e16b50791b",
+          "classification": "provider",
+          "reason": "provider or subtask request failed"
+        }
+      ],
+      "waived": []
+    },
+    "elapsed_ms": 1613
+  },
+  "retry_report": {
+    "schema_version": "ocr.llm-retry-report/v1",
+    "total_requests": 1,
+    "retried_requests": 0,
+    "total_retries": 0,
+    "recovered_requests": 0,
+    "failed_requests": 1,
+    "cancelled_requests": 0,
+    "requests": [
+      {
+        "logical_request_id": "ab32df8ca2af4b53af8cb3ba21a0010e3b8ad1907d34a275eebaf75c543beb83",
+        "provider": "gemini",
+        "model": "gemini-3.5-flash",
+        "file_path": "app.ts",
+        "task_type": "main_task",
+        "request_no": 1,
+        "outcome": "failed",
+        "attempts": [
+          {
+            "attempt": 1,
+            "outcome": "error",
+            "error_class": "provider",
+            "failure_phase": "http",
+            "status_code": 402,
+            "duration_to_headers_ms": 393
+          }
+        ]
+      }
+    ]
+  }
+}

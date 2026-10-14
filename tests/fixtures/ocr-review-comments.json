@@ -1,0 +1,55 @@
+{
+  "status": "success",
+  "llm": {
+    "provider": "fixture",
+    "model": "captured-shape"
+  },
+  "summary": {
+    "files_reviewed": 1,
+    "comments": 2,
+    "total_tokens": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "elapsed": "0s"
+  },
+  "tool_calls": {
+    "total": 0,
+    "by_tool": {},
+    "failure": 0,
+    "failure_by_tool": {},
+    "failure_details": []
+  },
+  "comments": [
+    {
+      "path": "app.ts",
+      "content": "Hard-coded secret in source control.",
+      "start_line": 1,
+      "end_line": 1,
+      "category": "security",
+      "severity": "high",
+      "existing_code": "export const API_KEY = \"sk-live-abcdefghijklmnopqrstuvwxyz123456\";",
+      "suggestion_code": "Load API_KEY from process.env.",
+      "thinking": "Line 1 assigns a long sk-live token literal."
+    },
+    {
+      "path": "app.ts",
+      "content": "SQL string concatenation enables injection.",
+      "start_line": 3,
+      "end_line": 3,
+      "category": "security",
+      "severity": "high",
+      "existing_code": "  return \"SELECT * FROM users WHERE id = \" + userId;",
+      "suggestion_code": "Use parameterized queries.",
+      "thinking": "Line 3 concatenates user input into SQL."
+    }
+  ],
+  "groups": [
+    {
+      "label": "app.ts",
+      "files": [
+        "app.ts"
+      ]
+    }
+  ],
+  "session_id": "fixture-from-pin-shape-1672852136fc87748249d22bce0819f33419ea79"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "mode": "range",
+  "repository": "/private/var/folders/kl/_w9qtw_s3k999f7z5299w1fm0000gn/T/tmp.rsinWqjUBC",
+  "from": "e50751f04182bff187e7ab42fefe91dd5f2f2e65",
+  "to": "0638df19ec6442c645f88dee8fb646ac026e1bb3",
+  "merge_base": "e50751f04182bff187e7ab42fefe91dd5f2f2e65",
+  "total_files": 1,
+  "reviewable_count": 1,
+  "excluded_count": 0,
+  "total_insertions": 4,
+  "total_deletions": 1,
+  "reviewable_files": [
+    {
+      "path": "app.ts",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 1
+    }
+  ],
+  "excluded_files": []
+}
